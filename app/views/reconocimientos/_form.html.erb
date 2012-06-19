@@ -1,0 +1,62 @@
+<%= form_for @reconocimiento, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :examan_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :examan_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :endocrino, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :endocrino, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cardiobascular, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :cardiobascular, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :urogenital, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :urogenital, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :digestivo, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :digestivo, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :muscular, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :muscular, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :respiratorio, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :respiratorio, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :neurologico, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :neurologico, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :otros, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :otros, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                reconocimientos_path, :class => 'btn' %>
+  </div>
+<% end %>

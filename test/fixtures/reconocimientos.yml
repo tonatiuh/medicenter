@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  examan_id: 1
+  endocrino: MyText
+  cardiobascular: MyText
+  urogenital: MyText
+  digestivo: MyText
+  muscular: MyText
+  respiratorio: MyText
+  neurologico: MyText
+  otros: MyText
+
+two:
+  examan_id: 1
+  endocrino: MyText
+  cardiobascular: MyText
+  urogenital: MyText
+  digestivo: MyText
+  muscular: MyText
+  respiratorio: MyText
+  neurologico: MyText
+  otros: MyText

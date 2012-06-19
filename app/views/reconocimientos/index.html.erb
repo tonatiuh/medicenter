@@ -1,0 +1,52 @@
+<%- model_class = Reconocimiento.new.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:examan_id) %></th>
+      <th><%= model_class.human_attribute_name(:endocrino) %></th>
+      <th><%= model_class.human_attribute_name(:cardiobascular) %></th>
+      <th><%= model_class.human_attribute_name(:urogenital) %></th>
+      <th><%= model_class.human_attribute_name(:digestivo) %></th>
+      <th><%= model_class.human_attribute_name(:muscular) %></th>
+      <th><%= model_class.human_attribute_name(:respiratorio) %></th>
+      <th><%= model_class.human_attribute_name(:neurologico) %></th>
+      <th><%= model_class.human_attribute_name(:otros) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reconocimientos.each do |reconocimiento| %>
+      <tr>
+        <td><%= link_to reconocimiento.id, reconocimiento_path(reconocimiento) %></td>
+        <td><%= reconocimiento.examan_id %></td>
+        <td><%= reconocimiento.endocrino %></td>
+        <td><%= reconocimiento.cardiobascular %></td>
+        <td><%= reconocimiento.urogenital %></td>
+        <td><%= reconocimiento.digestivo %></td>
+        <td><%= reconocimiento.muscular %></td>
+        <td><%= reconocimiento.respiratorio %></td>
+        <td><%= reconocimiento.neurologico %></td>
+        <td><%= reconocimiento.otros %></td>
+        <td><%=l reconocimiento.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_reconocimiento_path(reconocimiento), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      reconocimiento_path(reconocimiento),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_reconocimiento_path,
+            :class => 'btn btn-primary' %>

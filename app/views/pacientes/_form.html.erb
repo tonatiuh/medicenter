@@ -1,0 +1,44 @@
+<%= form_for @paciente, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nombre, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombre, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :telefono, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :telefono, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lugar_de_nacimiento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lugar_de_nacimiento, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :antecedentes_patologicos, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :antecedentes_patologicos, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :antecedentes_no_patologicos, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :antecedentes_no_patologicos, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :antecedentes_heredofamiliares, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :antecedentes_heredofamiliares, :class => 'text_area' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pacientes_path, :class => 'btn' %>
+  </div>
+<% end %>

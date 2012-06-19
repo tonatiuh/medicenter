@@ -1,0 +1,28 @@
+<%- model_class = reconocimiento.class -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:endocrino) %>:</strong></dt>
+  <dd><%= reconocimiento.endocrino %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cardiobascular) %>:</strong></dt>
+  <dd><%= reconocimiento.cardiobascular %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:urogenital) %>:</strong></dt>
+  <dd><%= reconocimiento.urogenital %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:digestivo) %>:</strong></dt>
+  <dd><%= reconocimiento.digestivo %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:muscular) %>:</strong></dt>
+  <dd><%= reconocimiento.muscular %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:respiratorio) %>:</strong></dt>
+  <dd><%= reconocimiento.respiratorio %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:neurologico) %>:</strong></dt>
+  <dd><%= reconocimiento.neurologico %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:otros) %>:</strong></dt>
+  <dd><%= reconocimiento.otros %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_reconocimiento_path(reconocimiento), :class => 'btn' %>
+</div>

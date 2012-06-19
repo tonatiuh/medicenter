@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  telefono: 1
+  lugar_de_nacimiento: MyString
+  antecedentes_patologicos: MyText
+  antecedentes_no_patologicos: MyText
+  antecedentes_heredofamiliares: MyText
+
+two:
+  nombre: MyString
+  telefono: 1
+  lugar_de_nacimiento: MyString
+  antecedentes_patologicos: MyText
+  antecedentes_no_patologicos: MyText
+  antecedentes_heredofamiliares: MyText
